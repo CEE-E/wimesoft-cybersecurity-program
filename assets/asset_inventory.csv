@@ -1,1 +1,18 @@
-
+AssetID,Hostname,AssetName,AssetType,Owner,Location,Criticality,DataSensitivity,OS_Version,IP_Address,MAC_Address,Status,Notes
+A-001,mgmt-lap-01,Management-Laptops,Endpoint,CTO,Office,High,Confidential,Windows 11 Pro,10.201.0.11,00:11:22:AA:00:01,Active,BitLocker; MFA; EDR installed
+A-002,eng-ws-01,Engineering-Workstations,Endpoint,Engineering Lead,Office,High,Confidential,Windows 11 Pro / Ubuntu 22.04,10.201.0.12,00:11:22:AA:00:02,Active,Hardening baseline; EDR; dev toolset
+A-003,fin-ws-01,Finance-Workstations,Endpoint,CFO,Office,High,Restricted,Windows 10 Pro,10.201.0.13,00:11:22:AA:00:03,Active,USB blocked; EDR; encrypted folders
+A-004,file-srv-01,File-Server,Server,IT Admin,Server Room,High,Restricted,Windows Server 2022,10.201.0.20,00:11:22:BB:00:01,Active,NTFS ACLs; nightly backups; audit logs forwarded to SIEM
+A-005,dc-01,Domain-Controller,Server,IT Admin,Server Room,High,Confidential,Windows Server 2019,10.201.0.21,00:11:22:BB:00:02,Active,Sysmon enabled; AD auth; logs to SIEM
+A-006,app-srv-01,Application-Server,Server,CTO,Server Room,High,Internal,Ubuntu 22.04,10.201.0.22,00:11:22:BB:00:03,Active,Host firewall; logs to SIEM
+A-007,db-01,Database-Server,Server,CTO,Server Room,High,Restricted,PostgreSQL 14 on Ubuntu,10.201.0.23,00:11:22:BB:00:04,Active,Encrypted volumes; query logs to SIEM
+A-008,backup-01,Backup-Server,Server,IT Admin,Server Room,High,Restricted,Synology DSM / Ubuntu Backup,10.201.0.24,00:11:22:BB:00:05,Active,Daily incremental; weekly offline rotation
+A-009,fw-01,Firewall,Network Device,Network Engineer,Server Room,High,Confidential,PFsense 2.x,10.201.0.9,00:11:22:CC:00:01,Active,Firewall/VPN logs forwarded to SIEM
+A-010,core-switch-01,Core-Switch,Network Device,Network Engineer,Server Room,Medium,Internal,Cisco IOS,10.201.0.10,00:11:22:CC:00:02,Active,VLANs configured; port logging
+A-011,access-sw-01,Access-Switches,Network Device,Network Engineer,Office,Medium,Internal,Managed Switch,10.201.0.14,00:11:22:CC:00:03,Active,Port security (MAC limit)
+A-012,wifi-ap-01,Wireless-AP,Network Device,Network Engineer,Office,Medium,Internal,Unifi/Aruba Firmware,10.201.0.15,00:11:22:CC:00:04,Active,Corp/Guest SSIDs; admin VLAN isolated
+A-013,gitlab-01,Source-Control-Server,Server,Engineering Lead,Server Room,High,Confidential,Gitea/GitLab CE,10.201.0.25,00:11:22:BB:00:06,Active,CI + repo backups; logs to SIEM
+A-014,siem-01,SIEM-Server,Server,Security Engineer,Server Room,High,Confidential,Elastic/Splunk/Wazuh,10.201.0.30,00:11:22:DD:00:01,Active,EDR manager + correlation; dashboards
+A-015,logcoll-01,Log-Collector,Server,Security Engineer,Server Room,High,Confidential,Syslog-ng / Rsyslog,10.201.0.31,00:11:22:DD:00:02,Active,Normalizes logs before SIEM; retention 30-90d
+A-016,ups-01,UPS-Unit,Power Device,Facilities Manager,Server Room,Medium,Internal,N/A,10.201.0.40,00:11:22:EE:00:01,Active,Monthly tests; SNMP alerts to IT
+A-017,vpn-01,VPN-Appliance,Network Device,Network Engineer,Server Room,High,Confidential,OpenVPN / PFsense,10.201.0.8,00:11:22:CC:00:05,Active,Logs to SIEM; MFA required
