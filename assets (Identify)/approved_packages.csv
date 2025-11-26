@@ -1,0 +1,15 @@
+pkg,version,platform,approved,notes
+Google Chrome,117,Windows,TRUE,Standard browser for employees
+Mozilla Firefox,115,Windows/Linux,TRUE,Secondary browser
+Microsoft Edge,117,Windows,TRUE,Corporate browser (policy-managed)
+Visual Studio Code,1.85.0,Windows/Linux,TRUE,Developer IDE
+Git,2.4,Windows/Linux,TRUE,Source control client
+Python,3.1,Windows/Linux,TRUE,Developer runtime
+PostgreSQL,14,Ubuntu,TRUE,Database runtime for app
+OpenSSH,8.9,Ubuntu,TRUE,Remote admin access (managed keys)
+Nginx,1.22,Ubuntu,TRUE,Reverse proxy (approved)
+Splunk Universal Forwarder,9,Windows/Linux,TRUE,Log forwarding agent
+Elastic Agent,8.1,Windows/Linux,TRUE,EDR / telemetry agent (on-prem)
+Wazuh Agent,4.4,Windows/Linux,TRUE,Endpoint agent (if used)
+Sysmon,13.XX,Windows,TRUE,Windows telemetry
+Java,11,Windows/Linux,TRUE,Approved application runtime
