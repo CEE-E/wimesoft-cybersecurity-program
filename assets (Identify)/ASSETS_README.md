@@ -6,7 +6,7 @@ This directory includes two primary inventories:
 
 ---
 
-## 1. [assets (Identify)]/asset_inventory.csv
+## 1. [asset_inventory.csv](./assets/asset_inventory.csv)
 
 **Purpose:**  
 Provides a centralized and structured register of all critical assets across the WimeSoft environment, including endpoints, servers, network devices, infrastructure components, and security systems.
@@ -49,7 +49,7 @@ A complete asset inventory is foundational to all security functions—patch man
 
 ---
 
-## 2. [assets (Identify)]/approved_packages.csv]
+## 2. [asset_inventory.csv](./assets/approved_packages.csv)
 
 **Purpose:**  
 Documents all **corporate-approved software** permitted within the WimeSoft environment. This forms the authoritative list used by:
@@ -118,6 +118,7 @@ All edits must follow the **WimeSoft Change Management Policy** and require:
 The `assets/` directory represents the foundation of WimeSoft’s cybersecurity program.  
 It enables accurate detection, effective response, informed risk decisions, and mature operational governance.  
 As the environment grows, additional inventories (network diagrams, dependency mapping, backup schedules) may be added here or under related directories.
+
 
 
 
