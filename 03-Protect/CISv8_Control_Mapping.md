@@ -1,8 +1,8 @@
 # NIST CSF 2.0 → CIS v8 (IG2) Mapping — (WimeSoft)
 
-This document maps NIST CSF 2.0 subcategories to CIS Controls v8 (IG2) and provides recommended technical implementations tailored to a small on-premises environment. The mapping explicitly supports the Protect function by ensuring we have documented, measurable controls that enforce secure configuration, access management, data protection, and vulnerability reduction throughout the environment.
+This document maps NIST CSF 2.0 subcategories to CIS Controls v8 (IG2) and provides recommended technical implementations tailored to Wimesoft's environment. The mapping explicitly supports the Protect function by ensuring we have documented, measurable controls that enforce secure configuration, access management, data protection, and vulnerability reduction throughout the environment.
 
----
+
 
 ## Identify (ID)
 
@@ -15,7 +15,7 @@ This document maps NIST CSF 2.0 subcategories to CIS Controls v8 (IG2) and provi
 | **ID.RA-2 — Threat identification** | CIS 7.1 / 7.2 | Regular authenticated vulnerability scans, periodic threat modeling, and a local risk register. | A-001 to A-017 | IG2 requires recurring vulnerability management and documented triage. |
 | **ID.RA-6 — Risk reduction decisions** | CIS 17.1 | Risk treatment plans with compensating controls, acceptance criteria, and remediation SLAs tied to asset criticality. | A-001 to A-017 | Formal, documented risk decisions with approval are expected at IG2. |
 
----
+
 
 ## Protect (PR)
 
@@ -31,7 +31,7 @@ This document maps NIST CSF 2.0 subcategories to CIS Controls v8 (IG2) and provi
 | **PR.IP-3 — Change control** | CIS 4.7 | Formal change request process, CAB approvals, rollback plans and a maintained change log. | All production infrastructure | IG2 expects documented change control for production assets. |
 | **PR.PT-4 — Physical security** | CIS 14.1 | Server room badge access, CCTV, visitor logging and rack labeling/tagging. | Server room: A-004, A-005, A-006, A-007, A-008, A-014, A-015 | Physical protections must be auditable at IG2. |
 
----
+
 
 ## Detect (DE)
 
@@ -44,7 +44,7 @@ This document maps NIST CSF 2.0 subcategories to CIS Controls v8 (IG2) and provi
 | **DE.DP-4 — Logging retention & protection** | CIS 8.1 | Retain logs 30–90 days by asset criticality; protect logs via WORM or write-once archival and offsite copies. | Log storage (A-015), Backup Server (A-008) | Protected logs and retention SLAs are expected at IG2. |
 | **DE.DP-2 — Alerts & notifications** | CIS 8.7 | Route alerts to on-call engineer (email/SMS) with linked runbooks and a documented escalation matrix and SLA. | Monitored assets | Alert delivery, SLA and escalation processes are required at IG2. |
 
----
+
 
 ## Respond (RS)
 
@@ -57,7 +57,7 @@ This document maps NIST CSF 2.0 subcategories to CIS Controls v8 (IG2) and provi
 | **RS.IM-2 — Evidence preservation** | CIS 11.4 | Chain-of-custody controls, write-block imaging procedures, and a centralized read-only forensic repository. | Affected endpoints and servers | Ensures evidence integrity for remediation and legal needs. |
 | **RS.CO-2 — Stakeholder coordination** | CIS 11.6 | Communication matrix including legal, HR, executives and vendors; schedule regular tabletop exercises. | Organization-level | IG2 expects periodic exercises and communication readiness. |
 
----
+
 
 ## Recover (RC)
 
