@@ -41,55 +41,6 @@ WimeSoft operates a small, high-impact on-premises environment requiring strong 
 - Create tested incident response and recovery capabilities.
 - Maintain version-controlled standards, policies, and procedures.
 
----
-
-## Identify
-
-- Centralized asset registry including ownership, criticality, data sensitivity, OS, and dependency metadata.
-- Quarterly reconciliation combined with automated discovery mechanisms.
-- Baseline threat modeling to understand high-risk attack paths and likely adversary behaviors.
-
----
-
-## Protect
-
-- Centralized IAM with RBAC, MFA for privileged and remote access, and defined joiner/leaver workflows.
-- Hardened workstation and server baselines with configuration drift detection.
-- Encryption at rest, secure key management, encrypted backups, and environment-wide secure configuration standards.
-- Patch and vulnerability management with defined SLAs.
-- CIS-aligned control matrix mapping **NIST → CIS → technical implementation**.
-
----
-
-## Detect
-
-- SIEM ingest from AD, Sysmon/EDR, servers, network devices, and backup systems.
-- MITRE ATT&CK mapping focused on high-impact techniques such as credential abuse, lateral movement, exfiltration, and persistence.
-- SPL and KQL detection rules with enrichment, required context, triage logic, and severity ratings.
-- Alert tuning, false-positive tracking, and documented escalation paths.
-
----
-
-## Respond
-
-- Incident playbooks for:  
-  - Credential compromise  
-  - Endpoint compromise  
-  - Ransomware-style behaviors  
-  - Insider misuse  
-  - Infrastructure misconfiguration  
-- Structured triage, containment, evidence preservation, eradication, communication, and coordination steps.
-- Tabletop exercises validating timing, decision-making, and communications paths.
-- Post-incident remediation feeding back into configuration standards, detection logic, and hardening measures.
-
----
-
-## Recover
-
-- Defined RTO/RPO for Domain Controller, Database, File Server, Source-Control, and SIEM.
-- Nightly backups with integrity checks, point-in-time recovery (PITR) for databases, AD system-state backups, and network device configuration snapshots.
-- Step-by-step restore playbooks with dependency sequencing and verification/smoke-test steps.
-- Quarterly restore drills, tracked metrics, and documented outcomes.
 
 ---
 
@@ -144,4 +95,5 @@ WimeSoft’s SIEM detections, access controls, system hardening, and playbook-dr
 
 ## Summary Statement
 WimeSoft maintains a disciplined, framework-aligned operations and security program tailored for a modern startup. Through centralized identity, hardened infrastructure, SIEM-driven monitoring, documented IR and recovery processes, and dependable backup protections, WimeSoft ensures secure, resilient, and highly efficient delivery of internal business services.
+
 
