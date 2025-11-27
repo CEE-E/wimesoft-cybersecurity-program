@@ -1,4 +1,4 @@
-# NIST CSF 2.0 → CIS v8 (IG2) Mapping — (WimeSoft)
+# NIST CSF 2.0 to CIS v8 (IG2) Mapping — (WimeSoft)
 
 This document maps NIST CSF 2.0 subcategories to CIS Controls v8 (IG2) and provides recommended technical implementations tailored to Wimesoft's environment. The mapping explicitly supports the Protect function by ensuring we have documented, measurable controls that enforce secure configuration, access management, data protection, and vulnerability reduction throughout the environment.
 
