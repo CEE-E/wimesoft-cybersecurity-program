@@ -1,3 +1,8 @@
+## Purpose
+This section implements Splunk searches (SPL) as detection rules for a prioritized set of MITRE ATT&CK techniques. These rules are designed to align with the mappings and the asset context defined in the Protect section, covering the eight high-priority MITRE ATT&CK techniques referenced in [High-Priority ATT&CK Techniques — Quick Reference](https://github.com/CEE-E/wimesoft-cybersecurity-program/blob/main/03-Protect/mitre_att%26ck_mapping.md#high-priority-attck-techniques--quick-reference) .
+
+
+
 ## 1) Valid Accounts — T1078
 
 **Goal:**  
