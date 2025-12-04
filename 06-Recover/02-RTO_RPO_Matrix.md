@@ -3,7 +3,7 @@
 
 This baseline matrix sets Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) for prioritized assets.
 
-| Asset ID | Logical Name | Business Impact | Suggested RTO | Suggested RPO | Backup Frequency | Retention |
+| Asset ID | Logical Name | Business Impact |  RTO |  RPO | Backup Frequency | Retention |
 |---:|---|---|---:|---:|---|---|
 | A-005 | Domain Controller | Authentication services; organization-wide impact | 2 hours | 1 hour (system-state + AD replication) | System-state hourly; full nightly | 30 days |
 | A-007 | Database-Server | Application data | 4 hours | 15 minutes (WAL/PITR) | Daily full + continuous WAL archiving | 90 days |
