@@ -5,7 +5,6 @@
 
 
 **Owner:** IT Admin
-**Last Reviewed:** YYYY-MM-DD
 
 
 ## Preconditions
@@ -34,4 +33,10 @@
  Multiple test users can authenticate.
  Group Policy objects apply correctly to test endpoints.
  AD replication reports no errors.
+ 
+## Rollback/Contingency
+If restore fails, revert to pre-restore snapshot or failover to an alternate DC if available. Escalate to vendor  if needed.
 
+
+## Notes
+ Document the restore attempt in the Recovery Test Log and update the playbook where gaps are discovered.
