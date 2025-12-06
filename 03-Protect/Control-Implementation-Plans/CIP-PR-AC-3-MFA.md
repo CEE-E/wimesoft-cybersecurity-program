@@ -1,7 +1,7 @@
 # CIP: PR.AC-3 — Multi-Factor Authentication for Privileged & Remote Access
 
 **Control ID:** PR.AC-3  
-**Framework mapping:** NIST CSF 2.0 (PR.AC-3) to CIS v8 (6.3, IG2)  
+**Framework mapping:** NIST CSF 2.0 (PR.AC-3) - CIS v8 (6.3, IG2)  
 **Primary assets:** A-005 (Domain-Controller), A-017 (VPN-Appliance), A-001 (Management-Laptops)  
 **Owner:** Security Engineer or IT Admin  
 **Status:** Planned
