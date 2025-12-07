@@ -14,7 +14,7 @@
 A comprehensive asset and software inventory enables detection of unauthorized accounts and unapproved service or process changes.
 
 **Telemetry / Sources**  
-Active Directory logs, EDR enrollment logs, Sysmon service creation events, asset inventory feeds.
+Active Directory logs, Sysmon service creation events, asset inventory feeds.
 
 **Mapped Assets**  
 A-001 through A-017
@@ -34,7 +34,7 @@ A-001 through A-017
 Unauthorized tooling and scripting frequently indicate misuse or initial compromise through user execution.
 
 **Telemetry / Sources**  
-Sysmon process creation, EDR command-line telemetry, package manager logs (apt/dpkg, Windows Installer), configuration management scans.
+Sysmon process creation, package manager logs (apt/dpkg, Windows Installer), configuration management scans.
 
 **Mapped Assets**  
 A-001, A-002, A-003, A-013
@@ -72,7 +72,7 @@ A-009, A-010, A-015
 High-value assets (databases, file servers, code repositories) are primary targets for encryption and extortion; classification informs protection and recovery priorities.
 
 **Telemetry / Sources**  
-File modification events, file rename patterns, EDR behavioral indicators, file integrity monitoring.
+File modification events, file rename patterns,  behavioral indicators, file integrity monitoring.
 
 **Mapped Assets**  
 A-004, A-007, A-013
@@ -114,7 +114,7 @@ A-005, A-017, A-009
 Centralized identity, MFA, and least privilege reduce the success of credential attacks and limit lateral movement.
 
 **Telemetry / Sources**  
-AD authentication and privilege events, VPN logs, EDR alerts for interactive sessions.
+AD authentication and privilege events, VPN logs.
 
 **Mapped Assets**  
 A-001 through A-003, A-005, A-017
@@ -134,7 +134,7 @@ A-001 through A-003, A-005, A-017
 Encryption and monitoring reduce exposure and enable detection of abnormal data movements.
 
 **Telemetry / Sources**  
-Database query logs, SMB/CIFS transfer logs, network flow records, EDR network telemetry.
+Database query logs, SMB/CIFS transfer logs, network flow records.
 
 **Mapped Assets**  
 A-004, A-007, A-008, A-006
@@ -173,7 +173,7 @@ A-001 through A-007
 Timely patching reduces exposure to known exploits in application and infrastructure components.
 
 **Telemetry / Sources**  
-Vulnerability scanner results, web server logs, IDS/WAF alerts, EDR execution telemetry.
+Vulnerability scanner results, web server logs, IDS/WAF alerts.
 
 **Mapped Assets**  
 A-006, A-013
@@ -192,7 +192,7 @@ A-006, A-013
 Application allowlisting and media controls reduce opportunities for arbitrary code execution and process injection.
 
 **Telemetry / Sources**  
-EDR process creation events, USB mount logs, Windows audit logs.
+Endpoint process creation events, USB mount logs, Windows audit logs.
 
 **Mapped Assets**  
 A-001 through A-003
@@ -232,11 +232,11 @@ Server room: A-004, A-005, A-007, A-014, A-015
 Comprehensive telemetry across identity, endpoints, network, and servers enables detection of credential abuse, scripting misuse, credential dumping, and lateral movement.
 
 **Telemetry / Sources**  
-AD security events (A-005), Sysmon/EDR process and network telemetry (A-001 through A-007), firewall and VPN logs (A-009, A-017), normalized logs via Log Collector (A-015) into SIEM (A-014).
+AD security events (A-005), Sysmon process and network telemetry (A-001 through A-007), firewall and VPN logs (A-009, A-017), normalized logs via Log Collector (A-015) into SIEM (A-014).
 
 **Recommended Detections**
  Suspicious interactive administrative logons from external IP addresses.  
- Indicators of credential dumping (LSASS memory access, EDR alerts).  
+ Indicators of credential dumping.  
  Rapid multi-host authentication activity via remote services (RDP/SMB/SSH).
 
 
@@ -249,10 +249,10 @@ AD security events (A-005), Sysmon/EDR process and network telemetry (A-001 thro
 Behavioral detection with correlation reduces false positives and raises fidelity for high-value TTPs.
 
 **Telemetry / Sources**  
-EDR process trees and command-line telemetry (A-014), file integrity monitoring (A-004, A-007), SIEM correlation of EDR and firewall logs.
+End point processes and command-line telemetry, file integrity monitoring (A-004, A-007), SIEM correlation and firewall logs.
 
 **Recommended Detections**
- Correlated EDR alerts for credential dumping or process injection with unusual outbound traffic.  
+ Correlated alerts for credential dumping or process injection with unusual outbound traffic.  
  File integrity alerts for mass modifications on critical shares.
 
 
@@ -276,17 +276,12 @@ SIEM log retention (A-014), archival storage (A-008), log integrity controls (A-
 |---:|---|---|---|
 | T1078 | Valid Accounts | Common vector for privilege misuse and persistence | AD logs (A-005), VPN (A-017), SIEM (A-014) |
 | T1110 | Brute Force | Credential stuffing / brute force against DC or VPN | AD failed logon events, VPN logs (A-017) |
-| T1003 | Credential Dumping | Privilege escalation via LSASS/memory | EDR/LSASS telemetry (A-014), Sysmon (A-005) |
-| T1021 | Remote Services | Lateral movement via RDP/SMB/SSH | AD logs, EDR telemetry, firewall logs (A-009) |
-| T1059 | Command & Scripting Interpreter | Post-exploitation activity (scripting) | Sysmon process creation, EDR (A-001 through A-007) |
-| T1486 | Data Encrypted for Impact | Ransomware targeting DB/file servers | File modification spikes (A-004, A-007); EDR alerts |
+| T1003 | Credential Dumping | Privilege escalation via LSASS/memory | LSASS telemetry (A-014), Sysmon (A-005) |
+| T1021 | Remote Services | Lateral movement via RDP/SMB/SSH | AD logs, firewall logs (A-009) |
+| T1059 | Command & Scripting Interpreter | Post-exploitation activity (scripting) | Sysmon process creation,  (A-001 through A-007) |
+| T1486 | Data Encrypted for Impact | Ransomware targeting DB/file servers | File modification spikes (A-004, A-007) |
 | T1041 / T1071 | Exfiltration / C2 | Data exfiltration over network or C2 channels | Firewall logs (A-009), SIEM correlation (A-014) |
 | T1543 | Create/Modify System Process | Persistence via service or scheduled task creation | Sysmon/service events (A-004, A-006, A-013) |
 
 
-
-## Notes and Usage Guidance
- Use this document as the source of truth for detection engineering priorities and SIEM rule development.  
- For each recommended detection, implement corresponding SIEM searches, enrichment flows, and triage runbooks.  
- Maintain this mapping alongside the asset inventory and update it when asset ownership, telemetry sources, or the environment changes.
 
