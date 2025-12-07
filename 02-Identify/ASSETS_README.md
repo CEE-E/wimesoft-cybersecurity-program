@@ -4,7 +4,6 @@ The `assets/` directory contains the authoritative system-of-record for all oper
 
 This directory includes two primary inventories:
 
----
 
 ## 1. `asset_inventory.csv`
 
@@ -47,7 +46,7 @@ A complete asset inventory is foundational to all security functions—patch man
 - Backup and recovery requirements  
 - Annual asset certification reviews  
 
----
+
 
 ## 2. `approved_packages.csv`
 
@@ -88,16 +87,16 @@ This inventory ensures all installed software aligns with defined security basel
 - Developer environment consistency  
 - Dependency tracking for security patching  
 
----
+
 
 ## Governance and Maintenance
 
 Both inventories follow a controlled lifecycle to maintain reliability and alignment with operational changes:
 
 ### Update Frequency
-- **Monthly:** Reconciliations against EDR, AD, configuration management tools, and network scans  
-- **Quarterly:** Formal review by Security Engineer + IT Admin  
-- **Annually:** Audit for completeness, accuracy, and system lifecycle status  
+ **Monthly:** Reconciliations against AD, configuration management tools, and network scans  
+ **Quarterly:** Formal review by Security Engineer + IT Admin  
+ **Annually:** Audit for completeness, accuracy, and system lifecycle status  
 
 ### Change Control
 All edits must follow the **WimeSoft Change Management Policy** and require:
@@ -106,12 +105,9 @@ All edits must follow the **WimeSoft Change Management Policy** and require:
 2. Reviewer approval (Security + IT)
 3. Commit traceability preserved for audit
 
-### Mapping to Framework Requirements
-- **NIST CSF 2.0:** ID.AM-01, ID.AM-02, ID.RA-01  
-- **CIS Controls v8 IG2:** Control 1 (Enterprise Asset Inventory), Control 2 (Software Inventory)  
-- **MITRE ATT&CK:** Supports visibility for ATT&CK techniques T1087, T1018, T1057  
 
----
+
+
 
 ## Summary
 
