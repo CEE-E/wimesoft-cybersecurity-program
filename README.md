@@ -1,6 +1,6 @@
 # WimeSoft — README
 
-This repository is a practical, hands-on security program that demonstrates how NIST Cybersecurity Framework version 2.0 and CIS Controls version 8 (Implementation Group 2) can be applied in a small, on-premises environment. It is intentionally focused on strategic planning, evidence of applied learning, and a place to show initiative. It is not a running production environment and is by no means a perfect rendition.
+This repository is a practical, hands-on security program based on a *fictional organization* that demonstrates how NIST Cybersecurity Framework version 2.0 and CIS Controls version 8 (Implementation Group 2) can be applied in a small, on-premises environment. It is intentionally focused on strategic planning, evidence of applied learning, and a place to show initiative. It is not a running production environment and is by no means a perfect rendition.
 
 It is a demonstrable, version-controlled design that maps business risk to controls, detection, and recovery. It is useful to assess technical depth (detection engineering, control implementation), systems thinking (traceability, dependencies), and operational practicality (playbooks, validation).
 
